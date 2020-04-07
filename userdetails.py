@@ -35,15 +35,18 @@ while True:
         password_agreement = input("Do you accept this password? (Yes or No): ")
         if password_agreement.lower() == "yes":
             user_full_details.append(user_details_dict())
+            print("Your Details are: \n", user_details_dict())
             continue
         else:
             self_password = input("Please enter your own Password: ")
             if len(self_password) >= 7:
                 user_full_details.append(user_details_dict())
                 print("Password Accepted!")
+                print("Your Details are: \n", user_details_dict())
             else:
                 self_password = input("Please enter 7 or more characters: ")
                 user_full_details.append(user_details_dict())
+                print("Your Details are: \n", user_details_dict())
             continue
     else:
         break
